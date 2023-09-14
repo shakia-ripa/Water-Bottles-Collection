@@ -1,9 +1,11 @@
 .bottle{
     border: 2px solid lightblue;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 20px;
 
 }
 .bottle img{
-    width: 200px;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
 }
