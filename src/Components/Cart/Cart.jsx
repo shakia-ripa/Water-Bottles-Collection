@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import './Cart.css'
-const Cart = ({cart}) => {
+const Cart = ({cart, handleRemoveFromCart}) => {
     return (
         <div>
             <h3>Cart: {cart.length}</h3>
@@ -9,7 +9,7 @@ const Cart = ({cart}) => {
                     cart.map((bottle) => <div key={bottle.id}>
                         <img src={bottle.img}></img>
                         <br />
-                        <button>Remove</button>
+                        <button onClick={() =>handleRemoveFromCart(bottle.id)}>Remove</button>
                         </div>)
                     
                 }
@@ -19,6 +19,7 @@ const Cart = ({cart}) => {
     );
 };
 Cart.propTypes = {
-    cart:PropTypes.array.isRequired
+    cart: PropTypes.array.isRequired,
+    handleRemoveFromCart: PropTypes.func.isRequired
 }
 export default Cart;
