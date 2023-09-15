@@ -43,10 +43,13 @@ const Bottles = () => {
         <div>
             <h3>Bottles: {bottles.length}</h3>
             <Cart handleRemoveFromCart={handleRemoveFromCart} cart={cart}></Cart>
-            <div className="bottle-container">
+            <div>
+                <h3>Our Collection:</h3>
+                <div className="bottle-container">
                 {
                     bottles.map(bottle => <Bottle key={bottle.id} bottle={bottle} handleAddToCart={handleAddToCart}></Bottle>)
                 }
+                </div>
             </div>
         </div>
     );
